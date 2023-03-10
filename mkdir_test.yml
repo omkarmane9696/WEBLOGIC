@@ -1,0 +1,11 @@
+-
+ name: playbook to create file
+ hosts: all
+ tasks:
+ -
+  name: Create a folder
+  command: mkdir /folder1
+
+ -
+  name: Create a file in folder1
+  command: touch /folder1/file1.txt
