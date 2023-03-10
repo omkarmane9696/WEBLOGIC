@@ -1,6 +1,6 @@
 ---  
 - name: checking service status
-  hosts: www.linuxfoundation.org
+  hosts: all
   tasks:
   - name: checking service status
     command: systemctl status "{{ item }}"
