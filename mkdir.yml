@@ -1,6 +1,13 @@
----
-- name: Creates directory
+---  
+- name: checking service status
   hosts: all
-  file:
-    path: /omkat_test
-    state: directory
+  tasks:
+  - name: checking service status
+    command: systemctl status "{{ item }}"
+    with_items:
+    - firewalld
+    register: result
+    ignore_errors: yes
+  - name: showing report
+    debug:
+     var: result
