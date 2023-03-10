@@ -4,4 +4,4 @@
  tasks:
  -
   name: "start firewall on floor2"
-  service: name=firewalld state=stoped
+  service: name=firewalld state=stopped
