@@ -1,0 +1,7 @@
+-
+ name: start firewall on floor2
+ hosts: all
+ tasks:
+ -
+  name: "start firewall on floor2"
+  service: name=firewalld state=started
