@@ -1,0 +1,12 @@
+---
+- name: stop firewall
+  hosts all
+  gather_facts: true
+  become: yes
+  become_user: root
+  
+  tasks:
+  - name: excute scrpit firewall_stop.sh
+    command: sh firewall_stop.sh
+    args: 
+       chdir: /folder1
